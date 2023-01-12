@@ -5,7 +5,7 @@
 ## 🗓 2023.1.9 ~ 2023.2.9
 
 
-## 📝 What I Do
+## 📝 What I Did
 
 - 📖 TIL
 - ✏️  assignment_1~3
