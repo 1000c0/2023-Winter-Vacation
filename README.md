@@ -8,5 +8,3 @@
 ## 📝 What I Did
 
 - 📖 TIL
-- ✏️  assignment_1~3
-- 👜 knapsack
