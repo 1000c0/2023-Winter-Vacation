@@ -1,11 +1,8 @@
-package baekjoon;
-
 import java.util.Scanner;
 import java.util.Arrays;
 
 public class find_prime_number {
-	@SuppressWarnings("unlikely-arg-type")
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int length = sc.nextInt();
 		int [] arr = new int[length];
