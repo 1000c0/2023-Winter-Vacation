@@ -80,6 +80,7 @@ public class sum_prime_number {
         Scanner sc = new Scanner(System.in);
         int M = sc.nextInt();
         int N = sc.nextInt();
+        sc.close();
         int total = 0;
         int mini = 0;
 
