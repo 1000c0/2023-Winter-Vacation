@@ -28,8 +28,6 @@ public class find_prime_number {
 			boolean flag = pri.contains(arr[k]);
 			if (flag == true) {
 				count++;
-			} else {
-				continue;
 			}
 		}
 		System.out.println(count);
