@@ -1,5 +1,3 @@
-package baekjoon;
-
 import java.util.Scanner;
 import java.io.File;
 import javax.sound.sampled.AudioFormat;
@@ -486,7 +484,7 @@ public class judgement_game {
 	}
 
 	public static void bgm(String[] args) {
-		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files"; // fill in file name here
+		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files/bgm_yj.wav"; // fill in file name here
 
 		int EXTERNAL_BUFFER_SIZE = 524288;
 
@@ -555,7 +553,7 @@ public class judgement_game {
 	}
 
 	public static void objection_sound(String[] args) {
-		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files"; // fill in file name here
+		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files/Objection.wav"; // fill in file name here
 
 		int EXTERNAL_BUFFER_SIZE = 524288;
 
@@ -625,7 +623,7 @@ public class judgement_game {
 
 	public static void appearance(String[] args) {
 
-		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files"; // fill in file name here
+		String filename = "//Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files/appearance.wav"; // fill in file name here
 
 		int EXTERNAL_BUFFER_SIZE = 524288;
 
@@ -694,7 +692,7 @@ public class judgement_game {
 	}
 	public static void click(String[] args) {
 
-		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files"; // fill in file name here
+		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files/click.wav"; // fill in file name here
 
 		int EXTERNAL_BUFFER_SIZE = 524288;
 
@@ -763,7 +761,7 @@ public class judgement_game {
 	}
 	public static void winning(String[] args) {
 
-		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files"; // fill in file name here
+		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files/winning.wav"; // fill in file name here
 
 		int EXTERNAL_BUFFER_SIZE = 524288;
 
@@ -832,7 +830,7 @@ public class judgement_game {
 	}
 	public static void defeat(String[] args) {
 
-		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files"; // fill in file name here
+		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files/defeat.wav"; // fill in file name here
 
 		int EXTERNAL_BUFFER_SIZE = 524288;
 
@@ -901,7 +899,7 @@ public class judgement_game {
 	}
 	public static void ch_change(String[] args) {
 
-		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files"; // fill in file name here
+		String filename = "/Users/cheonsiyeong/Documents/PKNU/C.S'/2023-Winter-Vacation/java/Project/audio files/ch_change.wav"; // fill in file name here
 
 		int EXTERNAL_BUFFER_SIZE = 524288;
 
