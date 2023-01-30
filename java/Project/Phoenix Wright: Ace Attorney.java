@@ -53,18 +53,19 @@ public class judgement_game {
 		}
 
 		// 재판 시작
+		judgement_start();
 		Thread.sleep(2000);
 		judge_nom();
 		System.out.println("재판장 : 지금부터 재판을 시작하겠습니다. 모두 주의를 집중해 주십시오.");
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		System.out.println("재판장 : 피고인인 '종건'은 피해자를 숨지게 한 혐의가 있오.");
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		System.out.println("재판장 : 그러면 피고의 말부터 듣도록 하겠다.");
-		Thread.sleep(2000);
+		Thread.sleep(1500);
 
 		jonggeon();
 		System.out.println("피고 : 나는 당일 '종건급'이라며 피해자가 시비를 걸어서 겁만 주고 쫓아냈다.");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		System.out.println("피고 : 그 녀석의 몸에는 피한방울도 내지 않았지.");
 
 		Thread.sleep(2000);
@@ -79,7 +80,6 @@ public class judgement_game {
 		objection_sound(args);
 		naruhodo_nom();
 		System.out.println("무슨 증거를 사용해야 할까?");
-		Thread.sleep(1000);
 		System.out.println("1 : cctv 녹화본    2 : 검정고무신    3 : 피고의 핸드폰 사용 기록    4 : 스타벅스 커피 컵과 캐리어");
 		ans = sc.next();
 
@@ -90,13 +90,12 @@ public class judgement_game {
 			mitsurugi_mad();
 			Thread.sleep(2000);
 			System.out.println("검사 : 크윽 그건 그렇군...");
-			Thread.sleep(1000);
+			Thread.sleep(2500);
 			System.out.println("하지만 실랑이가 끝나고 피고가 피해자를 따라가는 모습 또한 찍히지 않았나!?");
 		} else if (ans.equals("2") || ans.equals("3") || ans.equals("4")) {
 			click(args);
 			win--;
 			mitsurugi_nom();
-			Thread.sleep(1000);
 			System.out.println("검사 : 하하하 띨빵한 녀석 그걸 증거라고 제출하는 거냐");
 		}
 
@@ -129,12 +128,11 @@ public class judgement_game {
 		Thread.sleep(2000);
 		judge_nom();
 		System.out.println("제판장 : 정숙하시오");
-		Thread.sleep(1000);
+		Thread.sleep(2300);
 		System.out.println("재판장 : 그럼 증인에게 질문하시오.");
 
 		Thread.sleep(2000);
 		System.out.println("무슨 질문을 할까?");
-		Thread.sleep(1000);
 		System.out.println("1 : 증인은 삼엽충입니까? 앱등이 입니까?\n2 : 스타벅스 좋아하십니까?");
 
 		ans = sc.next();
@@ -154,7 +152,7 @@ public class judgement_game {
 			objection_sound(args);
 			naruhodo_nom();
 			System.out.println("나루호도 : 아니요! 관련이 없지 않습니다. 현장에서 증인의 이름이 있는 스타벅스 캐리어가 나왔거든요!");
-			Thread.sleep(2000);
+			Thread.sleep(2700);
 			System.out.println("나루호도 : 증인이 피해자를 살해하고 그 죄를 피고에게 뒤집어 씌우려는 것 아닙니까?");
 			objection();
 			objection_sound(args);
@@ -168,8 +166,10 @@ public class judgement_game {
 		} else {
 			click(args);
 			win--;
+			naruhodo_embarrassed();
 			System.out.println("나루호도 : 어.....음......어/...");
-			Thread.sleep(1000);
+			Thread.sleep(2300);
+			mitsurugi_nom();
 			System.out.println("검사 : 말도 잘 못하는 녀석이 있군");
 		}
 		Thread.sleep(2000);
@@ -181,32 +181,32 @@ public class judgement_game {
 			win--;
 			wakgood_nom();
 			System.out.println("증인 : 3시리즈 페리도트 그린을 좋아합니다.");
-			Thread.sleep(2000);
+			Thread.sleep(2200);
 			System.out.println("재판장 : 어.....음......어/... 그렇다는 군요");
 		} else if (ans.equals("2")) {
 			click(args);
 			win++;
 			wakgood_nom();
 			System.out.println("증인 : 버거킹에서 빅맥을 먹었습니다.");
-			Thread.sleep(2000);
+			Thread.sleep(2700);
 			objection();
 			objection_sound(args);
 			naruhodo_nom();
 			System.out.println("나루호도 : 아니요. 빅맥은 맥도날드에서 파는 것 아닌가요!?");
-			Thread.sleep(2000);
+			Thread.sleep(2700);
 			wakgood_nom();
 			System.out.println("증인 : 실언했군요, 정정하겠습니다.");
-			Thread.sleep(2000);
+			Thread.sleep(2700);
 			objection();
 			objection_sound(args);
 			naruhodo_nom();
 			System.out.println("나루호도 : 아니요 당신은 실언한게 아닙니다. 당신은 버거킹에서 와퍼를 먹었지만, 거짓말을 한겁니다.");
-			Thread.sleep(2000);
+			Thread.sleep(2700);
 			objection();
 			objection_sound(args);
 			mitsurugi_nom();
 			System.out.println("검사 : 햄버거 잘못 말한거 가지고 소설을 쓰는 군.");
-			Thread.sleep(2000);
+			Thread.sleep(2700);
 
 			if (count == 1) {
 				win++;
@@ -214,14 +214,21 @@ public class judgement_game {
 				objection_sound(args);
 				naruhodo_nom();
 				System.out.println("나루호도 : 여기 사건 당일 버거킹의 와퍼 영수증입니다. 버거킹 바로 옆 건물에서 사건이 발생했지요.");
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				System.out.println("나루호도 : 분명히 결제인에 증인의 이름이 쓰여있습니다. 그리고 시간도 매우 상이하군요.");
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				System.out.println("나루호도 : 모든 정황이 증인이 범인이라고 하고 있습니다.");
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				wakgood_real();
 				System.out.println("증인 : 크윽.... 웃기지 마라");
 			}
+		}
+		else {
+			naruhodo_embarrassed();
+			System.out.println("나루호도 : 어.....음......어/...");
+			Thread.sleep(2300);
+			mitsurugi_nom();
+			System.out.println("검사 : 말도 잘 못하는 녀석이 있군");
 		}
 		sc.close();
 		judge_nom();
@@ -242,7 +249,30 @@ public class judgement_game {
 			defeat(args);
 		}
 	}
-
+	static void judgement_start() {
+		System.out.println("\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⢠⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⡄⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠒⢲⠒⠒⢸⡇⢸⠀⠀⠘⢛⠛⠛⡛⠃⠀⡇⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⡇⠀⠀⠉⠉⣏⠉⠉⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡀⠀⢸⡇⢸⠀⠀⠀⢸⠀⠀⡇⠀⠀⡷⠶⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⢸⡇⠀⠀⢀⡼⠙⢦⡀⠀⣿⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠋⢧⡀⢸⡏⢹⠀⠀⠛⠛⠛⠛⠛⠉⠀⡇⠀⠀⠀⠀⠀⣠⠞⠈⢳⣀⠀⢸⡇⠀⠈⠉⣀⣀⣀⣉⣀⣛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠀⠀⠉⢸⡇⢸⠀⠀⠀⠀⡇⠀⠀⠀⠀⠁⠀⠀⠀⠀⠈⠁⠀⠀⠀⠉⠀⢸⡇⠀⠀⠀⠉⠉⠉⠉⠉⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠃⠘⠀⠀⠀⠀⠛⠛⠛⠛⠛⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠰⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠆⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+				+ "");
+	}
 	public static void objection() {
 		System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠉⠻⣿⣿⣿⣿⣿⠿⠿⠛⠉⠈⠉⢻⣿⡿⠉⣿⣿⣿⣿⣿⣿⣿⡿⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
 		System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠈⠛⠿⣿⣿⣶⣤⣄⣀⠀⠀⠀⢻⣧⠀⠘⣿⣿⣿⣿⣿⠏⠀⢸⣿⣿⣿⣿⣿⣿⡿⣻⣿⣿⣿⣿⣿");
