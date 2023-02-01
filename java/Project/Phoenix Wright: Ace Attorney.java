@@ -6,7 +6,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
 
-public class judgement_game {
+public class main {
 	public static void main(String[] args) throws InterruptedException {
 		Scanner sc = new Scanner(System.in);
 		String ans = "0";
